@@ -1,23 +1,23 @@
 import { Chain } from '../../constants'
 import { getAddressLink, getTransactionLink } from '../../helpers/chainExplorerLink'
 
-const baseGoerliUrl = 'https://goerli.basescan.org'
+const baseSepoliaUrl = 'https://sepolia.basescan.org'
 
-export const BaseGoerli: Chain = {
-  chainId: 84531,
-  chainName: 'Base Goerli',
+export const BaseSepolia: Chain = {
+  chainId: 84532,
+  chainName: 'Base Sepolia',
   isTestChain: true,
   isLocalChain: false,
-  multicallAddress: '0x1Be882bE320C2C21849891E441da4829a34e0627',
-  rpcUrl: 'https://goerli.base.org',
+  multicallAddress: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  rpcUrl: 'https://sepolia.base.org',
   nativeCurrency: {
-    name: 'Goerli Ether',
+    name: 'Sepolia Ether',
     symbol: 'ETH',
     decimals: 18,
   },
-  blockExplorerUrl: baseGoerliUrl,
-  getExplorerAddressLink: getAddressLink(baseGoerliUrl),
-  getExplorerTransactionLink: getTransactionLink(baseGoerliUrl),
+  blockExplorerUrl: baseSepoliaUrl,
+  getExplorerAddressLink: getAddressLink(baseSepoliaUrl),
+  getExplorerTransactionLink: getTransactionLink(baseSepoliaUrl),
 }
 
 const baseUrl = 'https://basescan.org'
@@ -40,6 +40,6 @@ export const Base: Chain = {
 }
 
 export default {
-  BaseGoerli,
+  baseSepoliaUrl,
   Base,
 }
